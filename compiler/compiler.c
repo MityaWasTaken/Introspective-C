@@ -4,11 +4,22 @@
 #include <stdlib.h>
 #include <string.h>
 
-void ping() {
-    while(1) {
-        int png = system("ping 127.0.0.1");
-        printf("%d", png);
+void test() {
+    printf("Testing Token");
+}
+
+// function for outputting a string
+const char *__out(const char *string) {
+    const char *token_err = "I regret to inform you, but some command you used was invalid";
+
+    if(string[0] == '(' && string[strlen(string)-1] == ')'){
+        
+        if(string[1] == '"' && string[strlen(string)-2] == '"'){
+            return string;
+        }
+        return token_err;
     }
+    return token_err;
 }
 
 // this main function includes all main compiler stuff
@@ -31,20 +42,15 @@ int compiler(char fileName[]) {
             // checking if someone uses the print function anywhere in the program
             count += 1;
             char *function;
-            char *ping_token = "ping_home";
-            function = strstr(line, ping_token);
+            char *test_token = "test";
+
+            function = strstr(line, test_token);
 
             if(function){
-                ping();
-            } 
-            else if(!function){
-                break;
-                struct ERR err_singular = {1, "The token you tried to use does not exist"};
-                printf("error code %d \n", err_singular.err_code);
-                printf("%s", err_singular.error);
-            }
-            else{
-                printf("something went wrong :(");
+                test();
+            }  
+            else if(line[0] == '('){
+                printf("%s", __out(line));
             }
 
         }
