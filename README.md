@@ -11,11 +11,13 @@ introspective C is a compiled programming language that I wrote. a lot of it is 
 # Docs
 commands:
     ping_home   |   pings local host
+    ("FFF")     |   prints text between quote symbols
 
 
 # important notes
 language does not yet have a main function 
-language does not yet have any commands except for ping_home
+language does not yet have any commands except for ping_home and the string_print ability by doing ("this is a string")
 LANGUAGE DOES NOT REQUIRE SEMICOLONS
 it is tab sensitive
 it is case sensitive
+this languge can only run 1 command at a time at the moment currently
