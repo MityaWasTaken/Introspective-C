@@ -1,5 +1,0 @@
-# tokens
-ping_home   |   pings the localhost
-
-# datatypes
-none
