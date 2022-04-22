@@ -1,6 +1,9 @@
 # Introspecive-C
 introspective C is a compiled programming language that I wrote. a lot of it is introspective and that's why it's called Introspective C. It is a little hard to compile, because that too, is introspetive... again, hence the name introspective-C.. Despite the name, it has nothing to do with C besides the fact that I wrote it in C
 
+# quick note
+yes, I am aware of unsupported character output. and I am working very hard to fix the issue
+
 # How to compile 
 (1. download the compiler directory to your machine, with the C code in it and everything
 (2. create a directory called config and make a file called compiler.cnf.
