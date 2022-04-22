@@ -1,4 +1,4 @@
-// Interpretter for Introspective-C
+// compiler for Introspective-C
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,6 +8,15 @@ void test() {
     printf("Testing Token");
 }
 
+void remove_char(char *str, char garbage) {
+    char *src, *dst;
+    for (src = dst = str; *src != '\0'; src++) {
+        *dst = *src;
+        if (*dst != garbage) dst++;
+    }
+    *dst = '\0';
+}
+
 // function for outputting a string
 const char *__out(const char *string) {
     const char *token_err = "I regret to inform you, but some command you used was invalid";
@@ -15,7 +24,13 @@ const char *__out(const char *string) {
     if(string[0] == '(' && string[strlen(string)-1] == ')'){
         
         if(string[1] == '"' && string[strlen(string)-2] == '"'){
-            return string;
+            char *str = malloc(strlen(string)+1);
+            strcpy(str, string);
+            remove_char(str, '(');
+            remove_char(str, ')');
+            remove_char(str, '"');
+            free(str);
+            return str;
         }
         return token_err;
     }
