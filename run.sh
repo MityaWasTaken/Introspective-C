@@ -1,3 +1,3 @@
 make clean
 make
-bin/IC_Binary
+clear; bin/IC_Binary
