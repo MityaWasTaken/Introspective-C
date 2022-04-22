@@ -1,14 +1,5 @@
 # tokens
-var     | creates variable
-func    | defines function
-print   | print function
-if      | if statement conditional
-for     | for loop conditional
-while   | while look conditional
-return  | return value
+ping_home   |   pings the localhost
 
 # datatypes
-string  | represented with ""
-char    | represented with ''  
-int     | represented as any whole number
-double  | represented as any decimal number
+none
