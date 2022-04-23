@@ -1,4 +1,6 @@
-
+// mityawastaken
+// err.h
+// friday april 22 2022
 
 
 #include <stdio.h>
@@ -23,20 +25,20 @@ struct ERR {
 // attribute error handler
 void attribute_error_handler() {
     struct ERR attr = {3, __attr__};
-    printf("------\n error code: %s\n", attr.err_code);
-    printf("%s\n------", attr.err_msg);
+    printf("------\n error code: %d\n", attr.err_code);
+    printf("%s\n------\n", attr.err_msg);
 }
 
 // 2
 void token_error_handler() {
     struct ERR token = {2, __token__};
-    printf("------\n error code: %s\n", token.err_code);
-    printf("------\n%s\n", token.err_msg); 
+    printf("------\n error code: %d\n", token.err_code);
+    printf("%s\n------\n", token.err_msg); 
 }
 
 // 1
 void type_error_handler() {
     struct ERR type = {1, __type__};
-    printf("------\n error code: %s\n", type.err_code);
-    printf("------\n%s\n", type.err_msg); 
+    printf("------\n error code: %d\n", type.err_code);
+    printf("%s\n------\n", type.err_msg); 
 }
