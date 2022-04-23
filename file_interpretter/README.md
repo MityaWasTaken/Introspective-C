@@ -1,2 +1,2 @@
-# compiler
-not technocally a compiler. but for the sake of differentiating stuff, i'll just call this a compiler
+# File Interpretter
+The interpretter for reading the Introspective-C in a given file. See example in the example directory
