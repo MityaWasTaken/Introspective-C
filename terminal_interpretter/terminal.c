@@ -1,6 +1,11 @@
+// mityawastaken
+// terminal.c
+// friday april 22 2022
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "err.h"
 
 // function deletes a character
 void kill_char(char *string, char *garbage){
@@ -30,6 +35,7 @@ int main() {
             }
             system(input);
         }
+        
         else if(input[0] == '(' && input[strlen(input)-1] == ')'){
             if(input[1] == '"' && input[strlen(input)-2] == '"'){
                 for(int i=0; i<sizeof(deletable); i++){
@@ -37,6 +43,17 @@ int main() {
                 }
                 printf("%s\n", input);
             }
+            else{
+                type_error_handler();
+            }
+        }
+
+        else {
+            token_error_handler();
+        }
+
+        if(input[1] == ')'){
+            attribute_error_handler();
         }
 
     }
