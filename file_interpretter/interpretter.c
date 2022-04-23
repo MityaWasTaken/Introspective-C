@@ -1,4 +1,6 @@
-// compiler for Introspective-C
+// mityawastaken
+//  interpretter.c
+// friday april 22 2022
 
 #include <stdio.h>
 #include <stdlib.h>
